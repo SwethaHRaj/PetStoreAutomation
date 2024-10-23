@@ -43,7 +43,7 @@ public class ExtentReportManager implements ITestListener {
 	}
 
 	public void onStart(ITestContext context) {
-		String timeStamp= new SimpleDateFormat("dd.MM.yyyy HH.mm.ss").format(new Date());
+		String timeStamp= new SimpleDateFormat("dd.MM.yyyy hh.mm.ss").format(new Date());
 		String filePath=System.getProperty("user.dir")+"/TestReports/ExtentReport_"+timeStamp+".html";
 		File f=new File(filePath);
 		sparkReporter=new ExtentSparkReporter(f);
